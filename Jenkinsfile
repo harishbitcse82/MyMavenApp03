@@ -29,7 +29,8 @@ pipeline {
         stage('Run Application') {
             steps {
                 // Start the JAR application
-                sh 'java -jar target/MyMavenApp03-1.0-SNAPSHOT.jar'
+               // sh 'java -jar target/MyMavenApp03-1.0-SNAPSHOT.jar'
+              sh 'mvn exec:java -Dexec.mainClass="com.example.App"'
             }
         }
 
